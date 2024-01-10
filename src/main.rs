@@ -15,7 +15,6 @@ fn sleep_rnd() {
 
 fn main() {
     let dr_name = CString::new(std::env::args().collect::<Vec<String>>()[1].as_bytes()).unwrap();
-    println!("{:?}", unsafe { get_status(dr_name.as_ptr()) });
     unsafe {
         loop {
             if get_status(dr_name.as_ptr()) != 0x1 {
