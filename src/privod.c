@@ -3,6 +3,9 @@
 #include <linux/cdrom.h>
 #include <unistd.h>
 
+
+// Status: 0 - opened, 1 - closed, 2 - failed
+
 int get_status(char *drive_path) {
     int cdrom;
     int status=1;
@@ -20,7 +23,7 @@ int get_status(char *drive_path) {
 }
 
 void eject(char *drive_path) {
-    // Ignoring everything
+    // Ignore everything
     int cdrom;
     cdrom = open(drive_path, O_RDONLY | O_NONBLOCK);
     ioctl (cdrom, CDROMEJECT);
