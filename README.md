@@ -1,6 +1,6 @@
 # Privod (оптический привод)
 
-Ejects CD/DVD/BD drive at random time (from 5 secs to 5 mins)
+Eject CD/DVD/BD drive at random time (from 5 secs to 5 mins)
 
 Linux only.
 
