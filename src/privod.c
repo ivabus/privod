@@ -6,7 +6,7 @@
 
 // Status: 0 - opened, 1 - closed, 2 - failed
 
-int get_status(char *drive_path) {
+int c_get_status(char *drive_path) {
     int cdrom;
     int status=1;
 
@@ -22,7 +22,7 @@ int get_status(char *drive_path) {
     return status;
 }
 
-void eject(char *drive_path) {
+void c_eject(char *drive_path) {
     // Ignore everything
     int cdrom;
     cdrom = open(drive_path, O_RDONLY | O_NONBLOCK);
